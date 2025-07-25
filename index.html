@@ -2,22 +2,28 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muhammad Fikil Aziz</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-      color: white;
-    }
-
-    nav {
-     background-color: #f9f9f9; /* ganti sesuai warna yang kamu mau */
+      background-color: #f9f9f9; /* ganti sesuai warna yang kamu mau */
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
     nav .logo {
       font-size: 1.5rem;
@@ -28,6 +34,8 @@
       list-style: none;
       display: flex;
       gap: 1rem;
+      padding: 0;
+      margin: 0;
     }
 
     nav ul li a {
@@ -54,10 +62,19 @@
     }
 
     .socials a {
-      margin: 0 10px;
-      color: #00d4ff;
-      text-decoration: none;
-      font-size: 1.5rem;
+      margin: 0 15px;
+      display: inline-block;
+    }
+
+    .socials img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .socials img:hover {
+      transform: scale(1.2);
     }
 
     .search-box {
@@ -91,7 +108,7 @@
 
       nav ul {
         flex-direction: column;
-        padding: 0;
+        gap: 0.5rem;
       }
 
       .hero h1 {
@@ -111,11 +128,7 @@
     </ul>
   </nav>
 
-  <div class="hero">
-    <h1>Halo, saya Fikil 👋</h1>
-    <p>Selamat datang di website pribadi saya.<br>Berisi tentang kenangan, galeri foto, dan info pribadi saya.</p>
-
-     <div class="socials">
+  <div class="socials">
   <a href="https://facebook.com" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" width="32" height="32">
   </a>
@@ -126,6 +139,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
   </a>
 </div>
+
 
     <div class="search-box">
       <input type="text" placeholder="Cari sesuatu di sini...">
