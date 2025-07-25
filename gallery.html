@@ -2,82 +2,117 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Galeri Foto - Muhammad Fikil Aziz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Kenangan</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
     }
 
     header {
-      background-color: #1c1c1c;
-      padding: 15px;
       text-align: center;
-      font-size: 20px;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 2rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      animation: fadeIn 1s ease;
     }
 
     .container {
-      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
       max-width: 1200px;
       margin: auto;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .card {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      background-color: #ffffff10;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease;
     }
 
-    .grid img {
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
       width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #ffffff20;
     }
 
-    .grid img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 10px #ffffff50;
+    .card p {
+      text-align: center;
+      padding: 1rem;
+      font-weight: 500;
     }
 
     .back-link {
-      display: block;
-      margin-top: 30px;
       text-align: center;
+      margin: 2rem;
     }
 
     .back-link a {
-      color: #4db8ff;
+      color: #00d4ff;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    .back-link a:hover {
-      text-decoration: underline;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      } to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card img {
+        height: 150px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>Kenangan Muhammad Fikil Aziz</header>
+  <header>📸 Galeri Kenangan Muhammad Fikil Aziz</header>
 
   <div class="container">
-    <div class="grid">
-      <!-- Ganti link gambar di bawah ini sesuai gambar yang kamu miliki -->
-      <img src="https://source.unsplash.com/random/1" alt="Kenangan 1">
-      <img src="https://source.unsplash.com/random/2" alt="Kenangan 2">
-      <img src="https://source.unsplash.com/random/3" alt="Kenangan 3">
-      <img src="https://source.unsplash.com/random/4" alt="Kenangan 4">
-      <img src="https://source.unsplash.com/random/5" alt="Kenangan 5">
-      <img src="https://source.unsplash.com/random/6" alt="Kenangan 6">
+    <div class="card">
+      <img src="https://source.unsplash.com/500x300/?nature" alt="Random">
+      <p>Alam & Random</p>
     </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/500x300/?family" alt="Keluarga">
+      <p>Keluarga</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/500x300/?memories" alt="Kenangan">
+      <p>Kenangan</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/500x300/?photography" alt="Hobi">
+      <p>Hobi Fotografi</p>
+    </div>
+  </div>
 
-    <div class="back-link">
-      <a href="index.html">←Beranda</a>
-    </div>
+  <div class="back-link">
+    <a href="index.html">← Kembali ke Beranda</a>
   </div>
 
 </body>
