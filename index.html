@@ -4,81 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Fikil Aziz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2d9efc3b4.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      color: white;
     }
 
-    .container {
-      text-align: center;
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.6);
-      margin: 60px auto;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 15px;
-      animation: fadeIn 2s ease-in-out;
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
-    a {
-      color: #4db8ff;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
       text-decoration: none;
+      font-weight: 500;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.5s ease;
     }
 
-    .social-icons {
-      margin-top: 10px;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00d4ff;
     }
 
-    .social-icons i {
-      font-size: 24px;
-      margin: 0 8px;
-      transition: transform 0.3s;
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
-    .social-icons i:hover {
-      transform: scale(1.2);
+    .socials a {
+      margin: 0 10px;
+      color: #00d4ff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .search-box {
+      margin-top: 2rem;
+    }
+
+    .search-box input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 60%;
+      max-width: 400px;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1><strong>MUHAMMAD FIKIL AZIZ</strong></h1>
-    <p><a href="gallery.html">GALERY</a></p>
+  <nav>
+    <div class="logo">fikilaziz</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="gallery.html">Galeri</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
 
-    <p>HALLOO..., selamat datang!</p>
-    <p>Saya <strong>Aziz</strong>,Senang bisa berbagi dihalaman web saya ini yang masih kacau wkwk, sedikit tentang saya kalo kamu mau tau,,sebenarnya saya GANTENG lohh.</p>
+  <div class="hero">
+    <h1>Halo, saya Fikil 👋</h1>
+    <p>Selamat datang di website pribadi saya.<br>Berisi tentang kenangan, galeri foto, dan info pribadi saya.</p>
 
-    <p>
-      <strong>Tempat/Tanggal Lahir:</strong> batang, 4 Juli 2004<br>
-      <strong>Hobi:</strong> Fotografi, Menulis, Desain Web<br>
-      <strong>Instagram:</strong>
-      <a href="https://instagram.com/fikiaziz" target="_blank">@muhfikilaziz</a>
-    </p>
+    <div class="socials">
+      <a href="https://facebook.com" target="_blank">📘</a>
+      <a href="https://instagram.com" target="_blank">📸</a>
+      <a href="https://wa.me/6281234567890" target="_blank">💬</a>
+    </div>
 
-    <div class="social-icons">
-      <a href="https://instagram.com/fikiaziz" target="_blank"><i class="fab fa-instagram"></i></a>
-      <!-- Tambah ikon lain kalau mau -->
+    <div class="search-box">
+      <input type="text" placeholder="Cari sesuatu di sini...">
     </div>
   </div>
 
