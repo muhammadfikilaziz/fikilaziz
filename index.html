@@ -2,39 +2,148 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halo, Saya Fiki!</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Fikil Aziz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+       background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      color: white;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00d4ff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      display: inline-block;
+    }
+
+    .socials img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .socials img:hover {
+      transform: scale(1.2);
+    }
+
+    .search-box {
+      margin-top: 2rem;
+    }
+
+    .search-box input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 60%;
+      max-width: 400px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>fikilaziz</h1>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="gallery.html">Galeri</a>
-      <a href="about.html">Tentang</a>
-      <a href="contact.html">Kontak</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Halo, saya Fikil 👋</h2>
-    <p>Mahasiswa yang suka teknologi, desain, dan eksplorasi digital. Selamat datang di situs pribadi saya!</p>
+  <nav>
+    <div class="logo">fikilaziz</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="gallery.html">Galeri</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
 
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="socials">
+  <a href="https://facebook.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" width="32" height="32">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg" alt="Instagram" width="32" height="32">
+  </a>
+  <a href="https://wa.me/6281234567890" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+  </a>
+</div>
+
+
+    <div class="search-box">
+      <input type="text" placeholder="Cari sesuatu di sini...">
     </div>
+  </div>
 
-    <div class="search-container">
-      <input type="text" placeholder="Cari di website ini...">
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Muhammad Fikil Aziz. All rights reserved.
-  </footer>
 </body>
 </html>
