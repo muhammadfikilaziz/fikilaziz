@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>muhammadfikilaziz</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Fikil Aziz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9efc3b4.js" crossorigin="anonymous"></script>
   <style>
     body {
-      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80');
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 60px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #4db8ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons i {
+      font-size: 24px;
+      margin: 0 8px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body class="bg-gray-100/80 font-sans text-gray-800">
-  <header class="bg-white/80 shadow-md p-4">
-    <h1 class="text-2xl font-bold text-center">MUHAMMAD FIKIL AZIZ</h1>
-    <div class="text-center mt-2">
-      <a href="gallery.html" class="text-blue-500 underline">library</a>
+<body>
+
+  <div class="container">
+    <h1><strong>MUHAMMAD FIKIL AZIZ</strong></h1>
+    <p><a href="gallery.html">GALERY</a></p>
+
+    <p>HALLOO..., selamat datang!</p>
+    <p>Saya <strong>Aziz</strong>,Senang bisa berbagi dihalaman web saya ini yang masih kacau wkwk, sedikit tentang saya kalo kamu mau tau,,sebenarnya saya GANTENG lohh.</p>
+
+    <p>
+      <strong>Tempat/Tanggal Lahir:</strong> batang, 4 Juli 2004<br>
+      <strong>Hobi:</strong> Fotografi, Menulis, Desain Web<br>
+      <strong>Instagram:</strong>
+      <a href="https://instagram.com/fikiaziz" target="_blank">@muhfikilaziz</a>
+    </p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/fikiaziz" target="_blank"><i class="fab fa-instagram"></i></a>
+      <!-- Tambah ikon lain kalau mau -->
     </div>
-  </header>
-  <section class="max-w-3xl mx-auto mt-8 p-6 bg-white/90 rounded-xl shadow text-center">
-    <h2 class="text-xl font-semibold mb-2">Halo, selamat datang!</h2>
-    <p class="mb-4">Saya <strong>Muhammad Fikil Aziz</strong>, senang bisa berbagi kenangan bersama Anda melalui halaman ini.</p>
-    <div class="text-sm text-gray-700">
-      <p><strong>Tempat/Tanggal Lahir:</strong> Batang, 12 Februari 2004</p>
-      <p><strong>Hobi:</strong> Fotografi, Menulis, Desain Web</p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/fikiaziz" class="text-blue-500 underline">@muhfikilaziz</a></p>
-    </div>
-  </section>
+  </div>
+
 </body>
 </html>
