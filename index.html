@@ -2,148 +2,181 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muhammad Fikil Aziz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halo, Saya Fikil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    /* Reset & Font */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-       background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-      color: white;
     }
 
-    nav {
-      background: rgba(0, 0, 0, 0.5);
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Stars background */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: url('https://i.ibb.co/p0N5wS9/stars-bg.png') repeat;
+      animation: starMove 100s linear infinite;
+      z-index: 0;
+      opacity: 0.1;
+    }
+
+    @keyframes starMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-100px, -100px); }
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      z-index: 10;
+      backdrop-filter: blur(10px);
     }
 
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+    header h1 {
+      font-size: 1.8rem;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li a {
-      color: white;
+    nav a {
+      margin-left: 1rem;
       text-decoration: none;
-      font-weight: 500;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
     }
 
     .hero {
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 5rem 2rem;
-      animation: fadeIn 1.5s ease;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      color: #00d4ff;
+    .hero h2 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero p {
+      margin-top: 1rem;
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .socials a {
-      margin: 0 15px;
-      display: inline-block;
-    }
-
-    .socials img {
-      width: 32px;
-      height: 32px;
-      filter: brightness(0) invert(1);
-      transition: transform 0.3s ease;
-    }
-
-    .socials img:hover {
-      transform: scale(1.2);
-    }
-
-    .search-box {
-      margin-top: 2rem;
-    }
-
-    .search-box input {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      width: 60%;
-      max-width: 400px;
+      max-width: 600px;
+      margin-inline: auto;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 600px) {
+    .social-icons {
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 0.5rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #00ffff;
+      transform: scale(1.1);
+    }
+
+    .search-container {
+      margin-top: 3rem;
+    }
+
+    .search-container input {
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      border: none;
+      width: 250px;
+      max-width: 80%;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
       nav {
-        flex-direction: column;
-        align-items: center;
+        margin-top: 0.5rem;
       }
 
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
+      .hero h2 {
+        font-size: 2rem;
       }
 
-      .hero h1 {
-        font-size: 2.2rem;
+      .hero p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>fikilaziz</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gallery.html">Galeri</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
 
-  <nav>
-    <div class="logo">fikilaziz</div>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="gallery.html">Galeri</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <h2>Halo, saya Fikil 👋</h2>
+    <p>Mahasiswa yang suka teknologi, desain, dan eksplorasi digital. Selamat datang di situs pribadi saya!</p>
 
-  <div class="socials">
-  <a href="https://facebook.com" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" width="32" height="32">
-  </a>
-  <a href="https://instagram.com" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg" alt="Instagram" width="32" height="32">
-  </a>
-  <a href="https://wa.me/6281234567890" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
-  </a>
-</div>
-
-
-    <div class="search-box">
-      <input type="text" placeholder="Cari sesuatu di sini...">
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
-  </div>
 
+    <div class="search-container">
+      <input type="text" placeholder="Cari di website ini...">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Muhammad Fikil Aziz. All rights reserved.
+  </footer>
 </body>
 </html>
