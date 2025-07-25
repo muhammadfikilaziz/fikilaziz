@@ -1,142 +1,34 @@
-/* Umum */
+/* Reset & Font */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Background gradasi + bintang */
 body {
-  background: linear-gradient(to bottom right, #f7f8fc, #e3ecff);
-  background-attachment: fixed;
-  color: #333;
-  line-height: 1.6;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* Stars background */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.ibb.co/p0N5wS9/stars-bg.png') repeat;
+  animation: starMove 100s linear infinite;
+  z-index: 0;
+  opacity: 0.1;
 }
 
-nav a {
-  text-decoration: none;
-  color: #3f3f3f;
-  margin-left: 1rem;
-  font-weight: bold;
+@keyframes starMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100px, -100px); }
 }
 
-nav a:hover {
-  color: #0077ff;
-}
-
-/* Header intro */
-header {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  color: #2b4eff;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-header p {
-  margin-top: 1rem;
-  color: #666;
-  font-size: 1.1rem;
-}
-
-/* Sosial media */
-.social {
-  margin-top: 2rem;
-}
-
-.social a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #2b4eff;
-  font-size: 1.4rem;
-}
-
-.social a:hover {
-  color: #ff6f91;
-}
-
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 2rem;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.search-container input {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  width: 250px;
-  outline: none;
-  transition: 0.3s;
-}
-
-.search-container input:focus {
-  border-color: #2b4eff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #fff;
-  font-size: 0.9rem;
-  color: #999;
-  margin-top: 4rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-  }
-}
+/* ...lanjutan style untuk header, nav, hero, dll */
